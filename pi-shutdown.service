@@ -1,0 +1,8 @@
+[Unit]
+Description=Daemon monitoring gpio pin, shutdown rpi if pulled down
+[Service]
+ExecStart=/usr/bin/pi-shutdown
+ExecStop=/bin/systemctl kill pi-shutdown
+Type=forking
+[Install]
+WantedBy=multi-user.target

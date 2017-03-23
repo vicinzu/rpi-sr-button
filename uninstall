@@ -1,0 +1,18 @@
+# uninstall automatic power off
+
+# check if the install script is run by the 'pi' user
+if [ `whoami` != pi ]; then
+        echo "Please run as 'pi' user"
+        exit 1
+fi
+
+# turn off pt-poweroff.service, if running (upgrade instead of installation)
+sudo systemctl disable pt-poweroff.service
+
+#remove poweroff from /opt/pi-top
+sudo rm /opt/pi-top/poweroff/poweroff
+
+# remove pt-poweroff service
+sudo rm /lib/systemd/system/pt-poweroff.service/pt-poweroff.service
+
+echo "poweroff uninstalled"

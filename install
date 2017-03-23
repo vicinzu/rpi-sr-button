@@ -1,0 +1,21 @@
+# install pi-shutdown
+
+# check if the install script is run by the 'pi' user
+if [ `whoami` != pi ]; then
+        echo "Please run as 'pi' user"
+        exit 1
+fi
+
+# copy the file to /usr/bin, make it executable
+sudo cp pi-shutdown /usr/bin
+sudo chmod +x /usr/bin/pi-shutdown
+
+# turn off pi-shutdown.service, if running (upgrade instead of installation)
+sudo systemctl disable pi-shutdown.service
+
+# install pi-shutdown service
+sudo cp pi-shutdown.service /lib/systemd/system
+cd /lib/systemd/system
+sudo systemctl enable pi-shutdown.service
+
+echo "pi-shutdown installed"
