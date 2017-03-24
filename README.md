@@ -4,6 +4,10 @@ This can for example be used to shutdown a headless
 Raspberry Pi (including Raspberry Pi zero) gracefully
 (without risking to damage the file system on the sd card).
 
+The background program, which monitors the pin, is automatically started
+during bootup of the system. It is written in C and very small to minimize the
+overhead. It polls the pin once per second.
+
 To install:
 
 - Download the repository to your pi-top:
