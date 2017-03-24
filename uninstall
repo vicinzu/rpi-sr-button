@@ -6,13 +6,13 @@ if [ `whoami` != pi ]; then
         exit 1
 fi
 
-# turn off pt-poweroff.service, if running (upgrade instead of installation)
-sudo systemctl disable pt-poweroff.service
+# turn off pi-shutdown.service, if running (upgrade instead of installation)
+sudo systemctl disable pi-shutdown.service
 
-#remove poweroff from /opt/pi-top
-sudo rm /opt/pi-top/poweroff/poweroff
+#remove pi-shutdown from /usr/bin
+sudo rm /usr/bin/pi-shutdown
 
-# remove pt-poweroff service
-sudo rm /lib/systemd/system/pt-poweroff.service/pt-poweroff.service
+# remove pi-shutdown service
+sudo rm /lib/systemd/system/pi-shutdown.service
 
-echo "poweroff uninstalled"
+echo "pi-shutdown uninstalled"
