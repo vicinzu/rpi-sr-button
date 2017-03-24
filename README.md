@@ -1,5 +1,8 @@
 # pi-shutdown
-Shutdown Raspberry Pi if a defined pin is pulled down
+Shutdown Raspberry Pi if a defined pin is pulled down.
+This can for example be used to shutdown a headless
+Raspberry Pi (including Raspberry Pi zero) gracefully
+(without risking to damage the file system on the sd card).
 
 To install:
 
