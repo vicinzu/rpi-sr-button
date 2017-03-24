@@ -26,7 +26,7 @@ You must have admin rights, such as "pi" in Raspbian!
 - Reboot your pi
 
 The default pin is pin 40 of the gpio connector. This makes it easy to
-connect pin 40 to pin 39 (ground to force a shutdown). If the two pins
+connect pin 40 to pin 39 (ground) to force a shutdown. If the two pins
 are connected, for example with a push button, "sudo shutdown -h now" is
 executed.
 
