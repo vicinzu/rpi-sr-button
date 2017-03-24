@@ -10,6 +10,8 @@ overhead. It polls the pin once per second.
 
 To install:
 
+You must have admin rights, such as "pi" in Raspbian!
+
 - Download the repository to your pi-top:
 
 ```
@@ -18,7 +20,7 @@ To install:
   sudo apt-get install wiringpi
   cd pi-shutdown
   chmod +x install
-  ./install
+  sudo ./install
 ```
 
 - Reboot your pi
@@ -35,5 +37,5 @@ http://wiringpi.com/pins
 Afterwards, recompile the program and install it again
 ```
   make
-  ./install
+  sudo ./install
 ```

@@ -1,18 +1,13 @@
-# uninstall automatic power off
+# uninstall pi-shutdown
+# must be run as administrator, e.g. "sudo ./uninstall"
 
-# check if the install script is run by the 'pi' user
-if [ `whoami` != pi ]; then
-        echo "Please run as 'pi' user"
-        exit 1
-fi
+echo "turning pi-shutdown.service off"
+systemctl disable pi-shutdown.service
 
-# turn off pi-shutdown.service, if running (upgrade instead of installation)
-sudo systemctl disable pi-shutdown.service
+echo "removing pi-shutdown from /usr/bin"
+rm /usr/bin/pi-shutdown
 
-#remove pi-shutdown from /usr/bin
-sudo rm /usr/bin/pi-shutdown
-
-# remove pi-shutdown service
-sudo rm /lib/systemd/system/pi-shutdown.service
+echo "removing pi-shutdown service"
+rm /lib/systemd/system/pi-shutdown.service
 
 echo "pi-shutdown uninstalled"
