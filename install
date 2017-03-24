@@ -1,5 +1,11 @@
 # install pi-shutdown
-# must be run as administrator, e.g. "sudo ./install"
+# must be run as root, e.g. "sudo ./install"
+
+# Make sure only root can run the script
+if [ "$(id -u)" != "0" ]; then
+   echo '"install" must be run by root, e.g. "sudo ./install"' 1>&2
+   exit 1
+fi
 
 echo "copy the file to /usr/bin"
 cp pi-shutdown /usr/bin
