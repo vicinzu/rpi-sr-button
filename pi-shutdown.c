@@ -1,18 +1,11 @@
 //
-// pi-shutdown.c:
+// pi-shutdown.c
 // 
 
 
 #include <wiringPi.h>
 
 #include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <signal.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 
 #define PIN 29       // pin 40, wiring pi 29
 
