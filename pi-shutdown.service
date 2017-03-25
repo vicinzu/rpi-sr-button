@@ -1,5 +1,5 @@
 [Unit]
-Description=Process onitoring gpio pin, shutdown rpi if pulled down
+Description=Process monitoring gpio pin, shutdown rpi if pulled down
 [Service]
 ExecStart=/usr/bin/pi-shutdown
 ExecStop=/bin/systemctl kill pi-shutdown

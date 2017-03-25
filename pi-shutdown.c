@@ -1,6 +1,7 @@
 //
 // pi-shutdown.c
 // 
+// Copyright 2017  rricharz 
 
 
 #include <wiringPi.h>
