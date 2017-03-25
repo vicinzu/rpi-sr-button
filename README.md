@@ -30,7 +30,7 @@ connect pin 40 to pin 39 (ground) to force a shutdown. If the two pins
 are connected, for example with a push button, "sudo shutdown -h now" is
 executed.
 
-You can change the pin number in "pi-shutdown.c", line 17, constant PIN. 
+You can change the pin number in "pi-shutdown.c", line 11, constant PIN. 
 But be aware that wiringPi pin numbers need to be defined there, see
 http://wiringpi.com/pins or type:
 ```
