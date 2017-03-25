@@ -36,6 +36,12 @@ http://wiringpi.com/pins or type:
 ```
   gpio readall
 ```
+If you are using the desktop on a rpi 2, 3 or zero, you can
+install the following gpio display, which will also
+give you the current actual logic state of each pin as well as
+the gpio and wiringPi pin numbers
+https://github.com/rricharz/pi-gpio-display
+
 
 Afterwards, recompile the program and install it again
 ```
