@@ -1,12 +1,13 @@
 //
 // pi-shutdown.c
 // 
-// Copyright 2017  rricharz 
+// Copyright 2017,2019  rricharz 
 
 
 #include <wiringPi.h>
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define PIN 29       // pin 40, wiring pi 29
 
