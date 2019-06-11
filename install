@@ -1,4 +1,4 @@
-# install pi-shutdown
+# install rpi-sr-button
 # must be run as root, e.g. "sudo ./install"
 
 # Make sure only root can run the script
@@ -7,19 +7,19 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo "turning off pi-shutdown.service, if running (upgrade instead of installation)"
-systemctl disable pi-shutdown.service
-pkill pi-shutdown
+echo "turning off rpi-sr-button.service, if running (upgrade instead of installation)"
+systemctl disable rpi-sr-button.service
+pkill rpi-sr-button
 
 echo "copy the file to /usr/bin"
-cp pi-shutdown /usr/bin
+cp rpi-sr-button /usr/bin
 
 echo "making it executable"
-chmod +x /usr/bin/pi-shutdown
+chmod +x /usr/bin/rpi-sr-button
 
-echo "installing pi-shutdown service"
-cp pi-shutdown.service /lib/systemd/system
-cd /lib/systemd/system
-systemctl enable pi-shutdown.service
+echo "installing rpi-sr-button service"
+cp rpi-sr-button.service /etc/systemd/system
+cd /etc/systemd/system
+systemctl enable rpi-sr-button.service
 
-echo "pi-shutdown installed"
+echo "rpi-sr-button installed"

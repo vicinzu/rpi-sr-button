@@ -1,0 +1,7 @@
+[Unit]
+Description=Process monitoring gpio pin, shutdown or reboot rpi if pulled down
+[Service]
+ExecStart=/usr/bin/rpi-sr-button
+ExecStop=/bin/systemctl kill rpi-sr-button
+[Install]
+WantedBy=multi-user.target

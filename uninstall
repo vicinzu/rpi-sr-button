@@ -1,4 +1,4 @@
-# uninstall pi-shutdown
+# uninstall rpi-sr-button
 # must be run as administrator, e.g. "sudo ./uninstall"
 
 # Make sure only root can run the script
@@ -7,13 +7,13 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo "turning pi-shutdown.service off"
-systemctl disable pi-shutdown.service
+echo "turning rpi-sr-button.service off"
+systemctl disable rpi-sr-button.service
 
-echo "removing pi-shutdown from /usr/bin"
-rm /usr/bin/pi-shutdown
+echo "removing rpi-sr-button from /usr/bin"
+rm /usr/bin/rpi-sr-button
 
-echo "removing pi-shutdown service"
-rm /lib/systemd/system/pi-shutdown.service
+echo "removing rpi-sr-button service"
+rm /lib/systemd/system/rpi-sr-button.service
 
-echo "pi-shutdown uninstalled"
+echo "rpi-sr-button uninstalled"
